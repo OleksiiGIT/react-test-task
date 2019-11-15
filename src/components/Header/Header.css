@@ -1,0 +1,83 @@
+header {
+	background: white;
+	height: 75px;
+	width: 100%;
+	box-shadow: 0px 5px 15px 0px rgba(0,0,0,.1);
+	z-index: 1;
+	position: relative;
+}
+
+.headerWrapper {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	max-width: 1564px;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
+	height: 100%;
+}
+
+.headerWrapper > .headerWrapperTitle {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+}
+
+.headerWrapper > .headerWrapperTitle > img {
+	width: 50px;
+}
+
+.headerWrapper > .headerWrapperTitle > h5 {
+	margin-left: 20px;
+	text-transform: uppercase;
+	font-size: 14px;
+	color: #7cb342;
+	user-select: none;
+}
+
+.headerWrapper > .headerWrapperTitle > input {
+	margin-left: 150px;
+	width: 410px;
+	height: 30px;
+	border: none;
+	background: #f0f3f5;
+	border-radius: 5px;
+	outline: none;
+	padding-left: 14px;
+	box-shadow: inset 1px 2px 5px rgba(0,0,0,.2);
+}
+
+.headerWrapper > .headerWrapperTitle > input::placeholder {
+	color: #000;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.headerWrapper > .headerWrapperInfo {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+}
+
+.headerWrapper > .headerWrapperInfo > .headerWrapperInfoDate {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+.headerWrapper > .headerWrapperInfo > .headerWrapperInfoDate > img {
+	margin-left: 20px;
+	margin-right: 10px;
+}

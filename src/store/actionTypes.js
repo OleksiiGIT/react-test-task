@@ -1,0 +1,2 @@
+export const GET_ORDERS_COUNT = 'GET_ORDERS_COUNT'
+export const GET_ORDERS = 'GET_ORDERS'

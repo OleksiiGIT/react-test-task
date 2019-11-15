@@ -1,0 +1,169 @@
+.workplaceContainer {
+  width: 100%;
+  max-width: 1600px;
+  padding: 75px 0 0 130px;
+}
+
+.ordersMain > .ordersMainTitle {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+}
+
+.ordersMain > .ordersMainTitle h3 {
+	font-size: 30px;
+	margin: 0;
+	color: #2c3c44;
+	margin-left: 20px;
+}
+
+.ordersMain > .ordersMainTitle > .buttonAddOrder {
+	cursor: pointer;
+	position: relative;
+}
+
+.ordersMain > .ordersMainTitle > .buttonAddOrder:after {
+	content: '+';
+	color: white;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 2;
+	height: 25px;
+}
+
+
+.ordersMain > .ordersMainTitle > .buttonAddOrder > .buttonAddOrderInside {
+	background: #86bb4a;
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	z-index: 1;
+	position: relative;
+}
+
+.ordersMain > .ordersMainTitle > .buttonAddOrder > .buttonAddOrderOutside {
+	background: linear-gradient(to bottom, #86bb4a, #75a34b);
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: -5px;
+	border-radius: 100%;
+	left: -5px;
+}
+
+.ordersMainContainer {
+	margin-top: 60px;
+}
+
+.ordersMainContainer > .orderItem {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	-ms-align-items: center;
+	align-items: center;
+	border: 1px solid #cfd8dc;
+	border-radius: 5px;
+	padding: 25px 30px;
+	margin-bottom: 10px;
+}
+
+.ordersMainContainer > .orderItem:hover {
+	box-shadow: 0px 5px 15px 0px rgba(0,0,0,.1);
+}
+
+.ordersMainContainer > .orderItem > .orderItemTitle {
+	max-width: 650px;
+	width: 100%;
+	color: #546e7a;
+	font-size: 24px;
+}
+
+.ordersMainContainer > .orderItem > .orderItemInfo {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	-ms-align-items: center;
+	align-items: center;
+}
+
+.ordersMainContainer > .orderItem > .orderItemInfo > .orderItemInfoProducts {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.ordersMainContainer > .orderItem > .orderItemInfo > .orderItemInfoProducts > .orderItemInfoProductsImg {
+	margin-right: 20px;
+	border-radius: 100%;
+	border: 1px solid #cfd8dc;
+	width: 40px;
+	height: 40px;
+	position: relative;
+}
+
+.ordersMainContainer > .orderItem > .orderItemInfo > .orderItemInfoProducts > .orderItemInfoProductsImg img {
+	width: 25px;
+	position: absolute;
+	top: 7px;
+	left: 7px;
+}
+
+.ordersMainContainer > .orderItem > .orderItemInfo > .orderItemInfoProducts > .orderItemInfoProductsDesc p{
+	color: #90a4ae;
+	font-size: 16px;
+}
+
+.ordersMainContainer > .orderItem > .orderItemInfo > .orderItemInfoProducts > .orderItemInfoProductsDesc p:first-child {
+	color: #546e7a;
+	font-size: 24px;
+}
+
+.orderTopSet {
+	text-align: center;
+	color: #90a4ae;
+	font-size: 14px; 
+}
+
+.orderBottomSet {
+	color: #546e7a;
+	font-size: 20px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: flex-end;
+	align-items: flex-end;
+}
+
+.orderBottomSet p {
+	text-transform: uppercase;
+	margin-bottom: 1px;
+	margin-left: 10px;
+}
+
+.orderItemInfoPrice > .orderTopSet {
+	text-align: left;
+}
+
+.orderItemInfoDelete {
+	cursor: pointer;
+}
