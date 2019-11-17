@@ -9,7 +9,7 @@ const Product = props => {
         <div className='productItemCover'>
             <div className='productItem'>
                 <div className={`status ${props.status === 1 ? 'free' : ''}`}/>
-                <img src={props.img} alt="placeholder+image" />
+                <img src={props.img} alt="picture" />
                 <div className='mainInfo'>
                     <h5>{props.title}</h5>
                     <p>{props.serialNumber}</p>

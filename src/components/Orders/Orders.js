@@ -1,8 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from "react-redux"
 import {getOrdersCount, getOrders, loadProductsById} from '../../store/actions/order.js'
-import list_icon from '../../img/list_icon.svg'
-import delete_icon from '../../img/delete.png'
 import Backdrop from '../Backdrop/Backdrop.js'
 import Modal from '../Modal/Modal.js'
 import HeaderWorkplace from '../HeaderWorkplace/HeaderWorkplace.js'
@@ -11,7 +9,7 @@ import Order from "../Order/Order"
 
 class Orders extends Component {
 	constructor(props) {
-    super(props);
+    super(props)
 
 
     this.state = {
@@ -54,8 +52,8 @@ class Orders extends Component {
 
 	renderProducts() {
 		return this.props.products.map(prod => {
-			if (prod != null)
-				return (
+			return prod != null ?
+				 (
 					<Product
 						key={prod.id}
 						status={prod.status}
@@ -64,7 +62,7 @@ class Orders extends Component {
 						serialNumber={prod.serialNumber}
 						shortVersion={true}
 					/>
-				)
+				) : ''
 		})
 	}
 

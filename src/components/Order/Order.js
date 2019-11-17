@@ -23,7 +23,7 @@ const Order = props => {
 
     //Вычисляем количество продуктов у каждого заказа
     let prod_per_order = 0
-    props.products.map(prod => { if (prod.order === props.id) prod_per_order++ })
+    props.products.filter(prod => prod.order === props.id ? prod_per_order++ : '')
 
     return (
         <div className={`orderItem ${props.activeOrderInfo.id === props.id? 'active' : ' '}`} key={props.id} >

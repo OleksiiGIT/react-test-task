@@ -18,7 +18,7 @@ export function getOrders() {
 export function loadProductsById(id) {
 
 	const neededProducts = products.map(prod => {
-		return prod.order == id ? prod : null
+		return prod.order === id ? prod : null
 	})
 
 	return {

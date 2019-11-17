@@ -1,5 +1,5 @@
 import {GET_PRODUCTS_COUNT, GET_TYPES, GET_ALL_PRODUCTS, GET_PRODUCT_ORDER} from '../actionTypes.js'
-import {orders, products} from '../data.js'
+import {products} from '../data.js'
 
 export function getProductsCount() {
 	return {

@@ -3,8 +3,27 @@ import {NavLink} from 'react-router-dom'
 import './Menu.css'
 import avatar from '../../img/avatar.jpg'
 import settings from '../../img/settings.svg'
+import io from 'socket.io-client';
+
+const socket = io('http://localhost:4000');
+
+function foo(cb) {
+	socket.on('session', function(count){
+		console.log(count)
+		cb(null, count)
+	})
+}
 
 class Menu extends Component {
+	constructor(props) {
+		super(props);
+		foo((err, count) => this.setState({
+			count
+		}));
+		this.state = {
+			count: 0
+		}
+	}
 
 	renderLinks(links) {
         return links.map((link, index) => {
@@ -33,6 +52,7 @@ class Menu extends Component {
 
 		return (
 			<div className='sidebar'>
+				<h5>Количество активных вкладок: {this.state.count}</h5>
 				<div className='sidebarTopInfo'>
 					<div className='sidebarTopInfoImg'>
 						<img src={avatar} alt="placeholder+image" />

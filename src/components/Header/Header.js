@@ -5,9 +5,11 @@ import clock from '../../img/clock.svg'
 
 class Header extends Component {
 
-	constructor() {
-		super()
-		this.state = { date: new Date() }
+	constructor(props) {
+		super(props)
+		this.state = {
+			date: new Date()
+		}
 	}
 
 	componentDidMount() {
@@ -33,7 +35,6 @@ class Header extends Component {
 	render() {
 
 		const { date } = this.state;
-
 		return (
 			<header>
 				<div className='headerWrapper'>
