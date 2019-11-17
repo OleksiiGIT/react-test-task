@@ -1,0 +1,60 @@
+.modalContainer{
+	position: absolute;
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: 0px 5px 15px 0px rgba(0,0,0,.1);
+	z-index: 200;
+	width: 800px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.modalContainer > .modalTitle {
+	padding: 30px 40px;
+}
+
+.modalContainer > .modalTitle > h3 {
+	font-size: 24px;
+	color: #2c3c44;
+	margin: 0;
+}
+
+.modalContainer > .modalConfig {
+	background: #89c149;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	-o-flex-direction: row;
+	flex-direction: row;
+	justify-content: flex-end;
+	padding: 25px 35px;
+}
+
+.modalContainer > .modalConfig button {
+	background: none;
+	border: none;
+	font-size: 14px;
+	text-transform: uppercase;
+	cursor: pointer;
+	outline: none;
+}
+
+.modalContainer > .modalConfig button.modalConfigCancel {
+	color: white;
+	margin-right: 20px;
+}
+
+.modalContainer > .modalConfig button.modalConfigAction {
+	background: #fff;
+	color: #e8364f;
+	text-align: center;
+	padding: 20px 35px;
+	border-radius: 30px;
+	box-shadow: 0px 5px 15px 0px rgba(0,0,0,.1);
+}

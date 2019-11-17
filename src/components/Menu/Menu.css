@@ -1,21 +1,21 @@
-sidebar {
+.sidebar {
 	width: 200px;
 	background: white;
 	box-shadow: 0px 5px 15px 0px rgba(0,0,0,.1);
 }
 
-sidebar > .sidebarTopInfo {
+.sidebar > .sidebarTopInfo {
 	margin-top: 50px;
 	text-align: center;
 	position: relative;
 }
 
-sidebar > .sidebarTopInfo > .sidebarTopInfoImg img {
+.sidebar > .sidebarTopInfo > .sidebarTopInfoImg img {
 	width: 100px;
 	border-radius: 100%;
 }
 
-sidebar > .sidebarTopInfo > .sidebarTopInfoImg > .sidebarTopInfoSettings {
+.sidebar > .sidebarTopInfo > .sidebarTopInfoImg > .sidebarTopInfoSettings {
 	position: absolute;
 	bottom: 0;
 	background: white;
@@ -26,22 +26,22 @@ sidebar > .sidebarTopInfo > .sidebarTopInfoImg > .sidebarTopInfoSettings {
 	cursor: pointer;
 }
 
-sidebar > .sidebarTopInfo > .sidebarTopInfoImg > .sidebarTopInfoSettings img {
+.sidebar > .sidebarTopInfo > .sidebarTopInfoImg > .sidebarTopInfoSettings img {
 	width: 15px;
 }
 
-sidebar > nav > ul {
+.sidebar > nav > ul {
 	list-style: none;
 	padding-left: 0;
 	text-align: center;
 	margin: 60px 0 0 0;
 }
 
-sidebar > nav > ul > li {
+.sidebar > nav > ul > li {
 	margin-bottom: 30px;
 }
 
-sidebar > nav > ul > li > a {
+.sidebar > nav > ul > li > a {
 	text-decoration: none;
 	color: #36454d;
 	font-size: 14px;
@@ -50,6 +50,6 @@ sidebar > nav > ul > li > a {
 	padding: 0 5px 5px 5px;
 }
 
-sidebar > nav > ul > li > a.active {
+.sidebar > nav > ul > li > a.active {
 	border-bottom: 3px solid #5c8e29;
 }

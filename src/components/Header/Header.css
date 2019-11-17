@@ -13,7 +13,7 @@ header {
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	max-width: 1564px;
+	width: 80vw;
 	justify-content: space-between;
 	align-items: center;
 	margin: 0 auto;

@@ -24,15 +24,15 @@ class Menu extends Component {
 	render() {
 
 		const links = [
-			{to: '/', label: 'Приход', exact: 'true'},
-			{to: '/products', label: 'Продукты', exact: 'false'},
-			{to: '/groups', label: 'Группы', exact: 'false'},
-			{to: '/users', label: 'Пользователи', exact: 'false'},
-			{to: '/settings', label: 'Настройки', exact: 'false'}
+			{to: '/', label: 'Приход', exact: true},
+			{to: '/products', label: 'Продукты', exact: false},
+			{to: '/groups', label: 'Группы', exact: false},
+			{to: '/users', label: 'Пользователи', exact: false},
+			{to: '/settings', label: 'Настройки', exact: false}
 		]
 
 		return (
-			<sidebar>
+			<div className='sidebar'>
 				<div className='sidebarTopInfo'>
 					<div className='sidebarTopInfoImg'>
 						<img src={avatar} alt="placeholder+image" />
@@ -46,7 +46,7 @@ class Menu extends Component {
 	                    { this.renderLinks( links ) }
 	                </ul>
 	            </nav>
-			</sidebar>
+			</div>
 		)
 	}
 }
