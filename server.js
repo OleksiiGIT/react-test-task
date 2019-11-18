@@ -16,6 +16,6 @@ io.on('connection', function(socket){
 
 });
 
-http.listen(4000, function(){
-    console.log('listening on *:4000');
-});
+const port = 4000
+io.listen(port);
+console.log('listening on *:4000');
