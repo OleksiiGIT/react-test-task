@@ -9,16 +9,16 @@ import Order from "../Order/Order"
 
 class Orders extends Component {
 	constructor(props) {
-    super(props)
+		super(props)
 
 
-    this.state = {
-      modalOpen: false,
-      deletedItem: null,
-      showProducts: false,
-      activeOrderInfo: {}
-    }
-  }
+		this.state = {
+			modalOpen: false,
+			deletedItem: null,
+			showProducts: false,
+			activeOrderInfo: {}
+		}
+	}
 
 	renderPopupDelete(id) {
 		this.setState({
@@ -53,7 +53,7 @@ class Orders extends Component {
 	renderProducts() {
 		return this.props.products.map(prod => {
 			return prod != null ?
-				 (
+				(
 					<Product
 						key={prod.id}
 						status={prod.status}
@@ -89,52 +89,52 @@ class Orders extends Component {
 
 		const specialClasses = [
 			'ordersMain',
-			this.state.showProducts ? 'showProducts' : ''	
+			this.state.showProducts ? 'showProducts' : ''
 		]
 
 		return (
 			<React.Fragment>
 				<div className={specialClasses.join(' ')}>
-				<HeaderWorkplace
-					showAddButton={true}
-					headerText='Приходы'
-					countData={this.props.ordersCount}
-					showFilters={false}
-				/>
+					<HeaderWorkplace
+						showAddButton={true}
+						headerText='Приходы'
+						countData={this.props.ordersCount}
+						showFilters={false}
+					/>
 					<div className='ordersMainContainer'>
 						{this.renderOrders()}
 						<div className='productsPerOrderContainer'>
-						{
-							this.state.showProducts ?
+							{
+								this.state.showProducts ?
 									<React.Fragment>
-									<h3>{this.state.activeOrderInfo.title}</h3>
-									<div className='productsPerOrderContainerAdd'>
-										<div className='buttonAddOrder'>
-											<div className='buttonAddOrderInside'></div>
+										<h3>{this.state.activeOrderInfo.title}</h3>
+										<div className='productsPerOrderContainerAdd'>
+											<div className='buttonAddOrder'>
+												<div className='buttonAddOrderInside'></div>
+											</div>
+											<p>Добавить продукт</p>
 										</div>
-										<p>Добавить продукт</p>
-									</div>
-									<div className='productsInsideOrders'>{this.renderProducts()}</div>
-									<div className='modalClose' onClick={this.closeProductsHandler.bind(this)}></div>
+										<div className='productsInsideOrders'>{this.renderProducts()}</div>
+										<div className='modalClose' onClick={this.closeProductsHandler.bind(this)}></div>
 									</React.Fragment>
-													:
-													null
-						}
+									:
+									null
+							}
 						</div>
 					</div>
 				</div>
 				{this.state.modalOpen ? <Backdrop onClick={this.renderPopupDelete.bind(this, this.state.modalOpen)} /> : null}
 				{
-					this.state.modalOpen ? 
-						<Modal 
-							onClick={this.renderPopupDelete.bind(this, this.state.modalOpen)} 
+					this.state.modalOpen ?
+						<Modal
+							onClick={this.renderPopupDelete.bind(this, this.state.modalOpen)}
 							heading='Вы уверены, что хотите удалить этот приход?'
 							cancelText='Отменить'
 							actionText='Удалить'
 							actionFunc={this.deleteOrder.bind(this, this.state.deletedItem)}
-						/> 
-										: 
-										null
+						/>
+						:
+						null
 				}
 			</React.Fragment>
 		)

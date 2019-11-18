@@ -41,7 +41,7 @@ class Header extends Component {
 					<div className='headerWrapperTitle'>
 						<img src={logo} alt="placeholder+image" />
 						<h5>Inventory</h5>
-						<input type='text' placeholder='Поиск' /> 
+						<input type='text' placeholder='Поиск' />
 					</div>
 					<div className='headerWrapperInfo'>
 						<p>{this.getDay()}</p>

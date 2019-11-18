@@ -1,21 +1,19 @@
-const app = require('express')();
-const http = require('http').createServer(app);
-const io = require('socket.io')(http);
+const io = require('socket.io')();
 
-let count = 0
+let count = 0;
 
-io.on('connection', function(socket){
-    count++
-    socket.emit('session', count);
-    console.log('New Connection')
-    socket.on('disconnect', function() {
-        count--
-        socket.emit('session', count);
+io.on('connection', (client) => {
+    count++;
+    io.sockets.emit('session', count);
+    console.log('New Connection');
+
+    client.on('disconnect', () => {
+        if (count > 0) count--;
+        io.sockets.emit('session', count);
         console.log('Disconnected')
     });
-
 });
 
-const port = 4000
+const port = 8000;
 io.listen(port);
-console.log('listening on *:4000');
+console.log('listening on port ', port);

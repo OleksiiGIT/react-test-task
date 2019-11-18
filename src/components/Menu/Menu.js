@@ -3,42 +3,34 @@ import {NavLink} from 'react-router-dom'
 import './Menu.css'
 import avatar from '../../img/avatar.jpg'
 import settings from '../../img/settings.svg'
-import io from 'socket.io-client';
-
-const socket = io('http://localhost:4000');
-
-function foo(cb) {
-	socket.on('session', function(count){
-		console.log(count)
-		cb(null, count)
-	})
-}
+import {subscribeToSessions} from "../../api";
 
 class Menu extends Component {
 	constructor(props) {
 		super(props);
-		foo((err, count) => this.setState({
+		subscribeToSessions((err, count) => this.setState({
 			count
 		}));
-		this.state = {
-			count: 0
-		}
 	}
 
+	state = {
+		count: 0
+	};
+
 	renderLinks(links) {
-        return links.map((link, index) => {
-            return (
-                <li key={index}>
-                    <NavLink
-                        to={link.to}
-                        exact={link.exact}
-                    >
-                        {link.label}
-                    </NavLink>
-                </li>
-            )
-        })
-    }
+		return links.map((link, index) => {
+			return (
+				<li key={index}>
+					<NavLink
+						to={link.to}
+						exact={link.exact}
+					>
+						{link.label}
+					</NavLink>
+				</li>
+			)
+		})
+	}
 
 	render() {
 
@@ -62,10 +54,10 @@ class Menu extends Component {
 					</div>
 				</div>
 				<nav>
-	                <ul>
-	                    { this.renderLinks( links ) }
-	                </ul>
-	            </nav>
+					<ul>
+						{ this.renderLinks( links ) }
+					</ul>
+				</nav>
 			</div>
 		)
 	}

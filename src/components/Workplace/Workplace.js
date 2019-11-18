@@ -9,10 +9,10 @@ class Workplace extends Component {
 
 		const routes = (
 			<Switch>
-              <Route path="/products" component={Products} />
-              <Route path="/" exact component={Orders} />
-              <Redirect to="/" />
-          	</Switch>
+				<Route path="/products" component={Products} />
+				<Route path="/" exact component={Orders} />
+				<Redirect to="/" />
+			</Switch>
 		)
 
 		return (
