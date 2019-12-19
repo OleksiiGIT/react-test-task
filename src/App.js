@@ -6,6 +6,8 @@ import Workplace from './components/Workplace/Workplace.js'
 class App extends Component {
 	render() {
 		console.log('test')
+        console.log('test')
+        console.log('test')
 		return (
 			<main>
 		      <Header />
