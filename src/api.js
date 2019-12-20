@@ -5,4 +5,5 @@ function subscribeToSessions(cb) {
     socket.on('session', count => cb(null, count));
 }
 
+//export { subscribeToSessions }
 export { subscribeToSessions }
